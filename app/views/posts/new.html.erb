@@ -1,0 +1,13 @@
+<h1>Новый Пост</h1>
+<%= link_to "Текс", posts_path %>
+<%= form_for :post, url: posts_path do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :text, "Текст" %>
+    <%= f.text_area :text %>
+  </p>
+  <%= f.submit "Запостить" %>
+<% end %>
