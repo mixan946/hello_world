@@ -1,0 +1,3 @@
+p #{@post.title} - #{@post.text}
+= link_to "Изменить", edit_post_path(@post.id)
+= link_to "Все", posts_path

@@ -1,0 +1,8 @@
+ul
+  - @posts.each do |post|
+    li
+      = link_to post.title, post_path(post.id)
+      = link_to "Изменить", edit_post_path(post.id), style: "padding: 0 0 0 10px"
+      = link_to "Удалить", post_path(post.id), method: :delete, style: "padding: 0 0 0 10px"
+
+= link_to "Новый пост!", new_post_path
