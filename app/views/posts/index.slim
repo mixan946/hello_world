@@ -4,5 +4,7 @@ ul
       = link_to post.title, post_path(post.id)
       = link_to "Изменить", edit_post_path(post.id), style: "padding: 0 0 0 10px"
       = link_to "Удалить", post_path(post.id), method: :delete, style: "padding: 0 0 0 10px"
+      = render "comments_list", post: post
+      = render "new_comment_form", post: post
 
-= link_to "Новый пост!", new_post_path
+= link_to t(:new_post), new_post_path

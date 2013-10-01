@@ -1,3 +1,6 @@
+- @post.errors.messages.each do |field, messages|
+  h2 #{ Post.human_attribute_name(field)}: #{messages.join(", ")}
+
 = form_for :post, url: url, method: method do |f|
   p
     = f.label :title

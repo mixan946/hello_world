@@ -1,2 +1,19 @@
 ru:
   hello_world: Привет мир!
+  new_post: Новый пост!
+  activerecord:
+    models:
+      post: Пост
+    attributes:
+      post:
+        title: "Заголовок"
+      comment:
+        commenter: "Ваше имя"
+        body: Комментарий
+    errors:
+      models:
+        post:
+          attributes:
+            title:
+              blank: "Заголовок не может быть пустым"
+              too_short: Заголовок не может быть меньше %{count}

@@ -1,0 +1,10 @@
+= form_for Comment.new, url: post_comments_url(post.id) do |f|
+  div
+    = f.label :commenter
+    = f.text_field :commenter
+  div
+    = f.label :body
+    = f.text_area :body
+  div
+    = f.submit
+

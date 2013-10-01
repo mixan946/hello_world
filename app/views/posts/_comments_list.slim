@@ -1,0 +1,9 @@
+- if post.comments.present?
+  ul
+    - post.comments.each do |comment|
+      li
+        span Написал: #{comment.commenter}
+        div
+          b Текст:
+          = comment.body
+        = link_to "Удалить", post_comment_path(post.id, comment.id), method: :delete
