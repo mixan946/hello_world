@@ -1,4 +1,14 @@
 HelloWorld::Application.routes.draw do
+  devise_for :users
+  resources :users do
+    collection do
+    end
+    member do
+      post :subscribe
+      get :following
+    end
+  end
+
   root 'posts#index'
 
   resources :posts do
